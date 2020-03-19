@@ -30,7 +30,7 @@ class Song
   
   def self.genre_count
     Hash[*@@genres.group_by do |genre| 
-      genre.flat_map
+      genre.flat_map{ |key, value| [key, value.size] }]
     end
   end
   
