@@ -29,7 +29,8 @@ class Song
   end
   
   def self.genre_count
-    @@genres.tally
+    new_hash = @@genres
+    new_hash.tally
   end
   
   def self.artist_count
