@@ -19,9 +19,9 @@ class Song
     @@count
   end
 
-  def self.artists(artist)
+  def self.artists
     unique_artists = []
-      artist.uniq!
+      @@artists.uniq!
       unique_artists << artist
   end
     
