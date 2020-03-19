@@ -29,7 +29,7 @@ class Song
   end
   
   def self.genre_count
-    @@genres.group_by{ |genre| genre }.map
+    @@genres.group_by{ |genre| genre }.map{ |key
   end
   
   def self.artist_count
