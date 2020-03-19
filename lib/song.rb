@@ -29,8 +29,7 @@ class Song
   end
   
   def self.genre_count
-    new_hash = {}
-      @@genres.each { |genre| new_hash[genre] + 1 }
+    Hash[*@@genres.group_by{ |g| g}.flat_map{ |k, v| [k, v.size] }]
   end
   
   def self.artist_count
